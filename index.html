@@ -201,6 +201,13 @@ footer b{color:#fff;}
 .aquote{border:1px solid rgba(231,197,109,.5);}
 .twin,.pcard,.igcard,.st,.sum,.bl,.rc,.k,.fp,.acred,.scard,.faq details{box-shadow:0 22px 54px -22px rgba(0,0,0,.55);}
 
+/* 점수 분해 칩 (twin 카드) */
+.twin .brk{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:16px 0 10px;}
+.twin .bi{background:#f6f1e6;border:1px solid #e8dfc9;border-radius:12px;padding:11px 6px;text-align:center;}
+.twin .bi b{display:block;font-family:var(--serif);font-size:20px;font-weight:800;color:var(--ink);line-height:1.2;}
+.twin .bi span{font-size:11.5px;color:var(--muted);font-weight:700;line-height:1.35;display:block;margin-top:3px;}
+.twin .rest{background:#fdeeec;border:1px solid #f3cfc9;border-radius:12px;padding:10px 12px;font-size:13.5px;color:#8a3a30;font-weight:700;text-align:center;}
+.twin .rest b{color:var(--danger);font-family:var(--serif);font-size:17px;}
 /* 간지 디바이더 */
 .divider{background:#081428;padding:104px 0;text-align:center;position:relative;overflow:hidden;}
 .divider::before{content:'';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:760px;height:760px;background:radial-gradient(circle,rgba(198,160,74,.17),transparent 62%);}
@@ -289,10 +296,12 @@ footer b{color:#fff;}
  <div class='twins'>
   <div class='twin'><div class='h'>미사고 1학년 공통국어1</div>
    <div class='big'>84.6점<small> / 100점</small></div>
-   <div class='d'>해석·추론(28.0), 〈보기〉 준거 결합(22.7), 문법 등 개념 적용(33.9)에 걸린 배점. 지문 내 사실 확인만으로 열리는 점수는 15.4점입니다.</div></div>
+   <div class='brk'><div class='bi'><b>28.0</b><span>해석·추론</span></div><div class='bi'><b>22.7</b><span>〈보기〉 준거 결합</span></div><div class='bi'><b>33.9</b><span>문법 등 개념 적용</span></div></div>
+   <div class='rest'>지문 내 사실 확인만으로 열리는 점수 <b>15.4점</b></div></div>
   <div class='twin'><div class='h'>미사고 2학년 문학</div>
    <div class='big'>92.9점<small> / 100점</small></div>
-   <div class='d'>해석·추론(41.5), 〈보기〉 준거 결합(32.2), 개념 적용(19.2)에 걸린 배점. 지문 내 사실 확인만으로 열리는 점수는 7.1점입니다.</div></div>
+   <div class='brk'><div class='bi'><b>41.5</b><span>해석·추론</span></div><div class='bi'><b>32.2</b><span>〈보기〉 준거 결합</span></div><div class='bi'><b>19.2</b><span>개념 적용</span></div></div>
+   <div class='rest'>지문 내 사실 확인만으로 열리는 점수 <b>7.1점</b></div></div>
  </div>
 </div></section>
 
@@ -303,10 +312,10 @@ footer b{color:#fff;}
  <div class='pcards' style='text-align:left'>
   <div class='pcard'><div class='no'>①</div><div class='h'>서술형 대신 '판정 부담'</div>
    <div class='d'>전 문항이 3점대 중반~4점대 소수점 배점의 평탄 분포라 버릴 문항이 없습니다. '있는 대로 고르기' 합답형은 진술 하나만 오판해도 문항을 통째로 잃습니다.</div></div>
-  <div class='pcard'><div class='no'>②</div><div class='h'>최고 배점은 〈보기〉 자리</div>
-   <div class='d'>1학년 4.6점 세 문항은 전부 합답형·〈보기〉 결합이고, 2학년 킬러 4.5·4.4점도 초현실주의 이론과 외부 작품을 결합한 자리입니다. 배점이 '이중 판단'에 실려 있습니다.</div></div>
-  <div class='pcard'><div class='no'>③</div><div class='h'>본문 밖 텍스트를 결합</div>
-   <div class='d'>1학년은 보드리야르·부조리극 같은 이론 〈보기〉를, 2학년은 〈보기〉·선지로 외부 작품을 이어 붙입니다. 외운 해설의 범위 밖에서 승부가 나는 설계입니다.</div></div>
+  <div class='pcard'><div class='no'>②</div><div class='h'>최고 배점은 〈보기〉 유형 문제</div>
+   <div class='d'>1학년 4.6점 세 문항은 전부 합답형·〈보기〉 결합이고, 2학년 킬러 4.5·4.4점도 초현실주의 이론과 외부 작품을 결합한 유형 문제입니다. 배점이 '이중 판단'에 실려 있습니다.</div></div>
+  <div class='pcard'><div class='no'>③</div><div class='h'>시험 범위 외 텍스트 결합</div>
+   <div class='d'>1학년은 보드리야르·부조리극 같은 독서 지문 텍스트 〈보기〉를, 2학년은 〈보기〉·선지로 외부 작품을 이어 붙입니다. 외운 해설의 범위 밖에서 승부가 나는 설계입니다.</div></div>
  </div>
 </div></section>
 
@@ -328,7 +337,7 @@ footer b{color:#fff;}
  <h3>한눈에 보는 출제 구조</h3>
  <div class='igwrap'><div class='igcard'><div class='igt'>무엇을 읽게 했나 — 지문·영역별 배점</div><div class='donutwrap'><div class='donut' style='background:conic-gradient(#15294f 0.0deg 45.0deg,#8a93a8 45.0deg 72.7deg,#c0392b 72.7deg 117.4deg,#d9634e 117.4deg 165.2deg,#e8907e 165.2deg 180.4deg,#213c6c 180.4deg 255.6deg,#c6a04a 255.6deg 301.3deg,#e7c56d 301.3deg 331.6deg,#b9c0cf 331.6deg 360.0deg)'><div class='dcenter'><div class='b'>100점</div><div class='s'>전 문항 분류 확정</div></div></div><div class='dleg'><div class='dli'><span class='sw' style='background:#15294f'></span>현대시·수필 복합(1~3)<b>12.5점</b></div><div class='dli'><span class='sw' style='background:#8a93a8'></span>화법 발표(4~5)<b>7.7점</b></div><div class='dli'><span class='sw' style='background:#c0392b'></span>문법: 높임·인용(6~8)<b>12.4점</b></div><div class='dli'><span class='sw' style='background:#d9634e'></span>문법: 시제·동작상(9~11)<b>13.3점</b></div><div class='dli'><span class='sw' style='background:#e8907e'></span>문법: 피동(12)<b>4.2점</b></div><div class='dli'><span class='sw' style='background:#213c6c'></span>희곡 「원고지」(13~17)<b>20.9점</b></div><div class='dli'><span class='sw' style='background:#c6a04a'></span>고전시가·한시(18~20)<b>12.7점</b></div><div class='dli'><span class='sw' style='background:#e7c56d'></span>고전수필 「왜려설」(21~22)<b>8.4점</b></div><div class='dli'><span class='sw' style='background:#b9c0cf'></span>독서 인문(23~24)<b>7.9점</b></div></div></div><div class='ignote'>문학이 54.5점으로 절반을 넘지만 문법 세트가 29.9점(7문항), 화법 융합 문항까지 넓히면 33.9점(8문항)으로 따라붙어, 국어 시험 안에 '문법 시험 하나'가 통째로 들어 있는 편성이다.</div></div><div class='igcard'><div class='igt'>무엇을 물었나 — 유형별 배점</div><div class='bar'><div class='bl'><span>외적 준거(〈보기〉) 적용</span><b>22.7점</b></div><div class='tr'><div class='fl' style='width:100%'></div></div></div><div class='bar'><div class='bl'><span>문법 개념 적용: 시제·동작상·피동</span><b>17.5점</b></div><div class='tr'><div class='fl' style='width:77%'></div></div></div><div class='bar'><div class='bl'><span>문법 개념 적용: 높임·인용</span><b>12.4점</b></div><div class='tr'><div class='fl' style='width:55%'></div></div></div><div class='bar'><div class='bl'><span>표현·서술상 특징과 전개 방식</span><b>19.5점</b></div><div class='tr'><div class='fl' style='width:86%'></div></div></div><div class='bar'><div class='bl'><span>구절·시어의 의미와 어조</span><b>11.9점</b></div><div class='tr'><div class='fl' style='width:52%'></div></div></div><div class='bar'><div class='bl'><span>인물 이해·내용 적용</span><b>8.3점</b></div><div class='tr'><div class='fl' style='width:37%'></div></div></div><div class='bar'><div class='bl'><span>화법(발표 전략·공손 표현)</span><b>7.7점</b></div><div class='tr'><div class='fl' style='width:34%'></div></div></div></div></div><div class='igcard' style='margin-top:16px'><div class='igt'>무엇으로 풀리나 — 요구되는 판단(배점 기준)</div><div class='stackbar'><div style='width:15.4%;background:#2f7d4f'>15.4</div><div style='width:28.0%;background:#c6a04a'>28</div><div style='width:22.7%;background:#c0392b'>22.7</div><div style='width:33.9%;background:#15294f'>33.9</div></div><div class='sleg'><span><i style='background:#2f7d4f'></i>지문 내 사실 확인</span><span><i style='background:#c6a04a'></i>지문 해석·추론</span><span><i style='background:#c0392b'></i>〈보기〉 외적 준거 결합</span><span><i style='background:#15294f'></i>개념·지식 적용</span></div><div class='ignote'>읽고 확인하면 끝나는 점수는 15.4점뿐이고, 나머지 84.6점은 해석하거나(28점) 준거를 씌우거나(22.7점) 문법 개념을 예문에 적용해야(33.9점) 열리는 구조다.</div></div>
  <h3>이 시험의 핵심 숫자 네 개</h3>
- <div class='stats4'><div class='st'><div class='n'>24문항</div><div class='l'>전 문항 선다형, 서술형 0</div><div class='t'>서술형 없이 3.7~4.6점의 소수점 배점만으로 100점을 구성했다. 쓰는 부담 대신 선지 하나하나를 판정하는 부담을 얹은 설계다.</div></div><div class='st'><div class='n'>33.9점</div><div class='l'>문법 8문항</div><div class='t'>높임·인용·시제·동작상·피동에 공손 표현 융합(5번)까지 8문항이 배치됐다. 높임·인용은 〈보기〉 자료형, 시제·동작상·피동은 설명 지문을 먼저 읽고 푸는 독서형이다.</div></div><div class='st'><div class='n'>4.6점×3</div><div class='l'>최고 배점은 전부 〈보기〉 자리</div><div class='t'>3·16·21번 세 문항이 나란히 4.6점이고, 셋 다 합답형이거나 외부 이론을 지문에 씌우는 〈보기〉 결합 문항이다. 배점이 지문 읽기가 아니라 '이중 판단'에 실려 있다.</div></div><div class='st'><div class='n'>0.9점</div><div class='l'>최고·최저 배점 격차</div><div class='t'>최저 3.7점과 최고 4.6점의 차이가 1점이 안 되는 평탄 분포다. 확인형 문항도 3점대 후반이라 어느 영역도 버릴 수 없는 구조다.</div></div></div>
+ <div class='stats4'><div class='st'><div class='n'>24문항</div><div class='l'>전 문항 선다형, 서술형 0</div><div class='t'>서술형 없이 3.7~4.6점의 소수점 배점만으로 100점을 구성했다. 쓰는 부담 대신 선지 하나하나를 판정하는 부담을 얹은 설계다.</div></div><div class='st'><div class='n'>33.9점</div><div class='l'>문법 8문항</div><div class='t'>높임·인용·시제·동작상·피동에 공손 표현 융합(5번)까지 8문항이 배치됐다. 높임·인용은 〈보기〉 자료형, 시제·동작상·피동은 설명 지문을 먼저 읽고 푸는 독서형이다.</div></div><div class='st'><div class='n'>4.6점×3</div><div class='l'>최고 배점은 전부 〈보기〉 유형 문제</div><div class='t'>3·16·21번 세 문항이 나란히 4.6점이고, 셋 다 합답형이거나 외부 이론을 지문에 씌우는 〈보기〉 결합 문항이다. 배점이 지문 읽기가 아니라 '이중 판단'에 실려 있다.</div></div><div class='st'><div class='n'>0.9점</div><div class='l'>최고·최저 배점 격차</div><div class='t'>최저 3.7점과 최고 4.6점의 차이가 1점이 안 되는 평탄 분포다. 확인형 문항도 3점대 후반이라 어느 영역도 버릴 수 없는 구조다.</div></div></div>
  <h3>실제 시험지 전문 — 직접 확인하세요</h3>
  <details class='scans'><summary>저희가 분석한 시험지 11페이지 전체</summary><div class='sgrid'><figure><img loading='lazy' src='assets/m1kor_p1.jpg' alt='미사고 1학년 국어 시험지 1페이지'><figcaption>1페이지</figcaption></figure><figure><img loading='lazy' src='assets/m1kor_p2.jpg' alt='미사고 1학년 국어 시험지 2페이지'><figcaption>2페이지</figcaption></figure><figure><img loading='lazy' src='assets/m1kor_p3.jpg' alt='미사고 1학년 국어 시험지 3페이지'><figcaption>3페이지</figcaption></figure><figure><img loading='lazy' src='assets/m1kor_p4.jpg' alt='미사고 1학년 국어 시험지 4페이지'><figcaption>4페이지</figcaption></figure><figure><img loading='lazy' src='assets/m1kor_p5.jpg' alt='미사고 1학년 국어 시험지 5페이지'><figcaption>5페이지</figcaption></figure><figure><img loading='lazy' src='assets/m1kor_p6.jpg' alt='미사고 1학년 국어 시험지 6페이지'><figcaption>6페이지</figcaption></figure><figure><img loading='lazy' src='assets/m1kor_p7.jpg' alt='미사고 1학년 국어 시험지 7페이지'><figcaption>7페이지</figcaption></figure><figure><img loading='lazy' src='assets/m1kor_p8.jpg' alt='미사고 1학년 국어 시험지 8페이지'><figcaption>8페이지</figcaption></figure><figure><img loading='lazy' src='assets/m1kor_p9.jpg' alt='미사고 1학년 국어 시험지 9페이지'><figcaption>9페이지</figcaption></figure><figure><img loading='lazy' src='assets/m1kor_p10.jpg' alt='미사고 1학년 국어 시험지 10페이지'><figcaption>10페이지</figcaption></figure><figure><img loading='lazy' src='assets/m1kor_p11.jpg' alt='미사고 1학년 국어 시험지 11페이지'><figcaption>11페이지</figcaption></figure></div></details>
  <h3>문항별 분석표 — 유형·개념·출제 포인트</h3>
